@@ -1,11 +1,11 @@
 package com.dianping.cat.configuration;
 
-import java.util.Stack;
-
 import com.dianping.cat.configuration.client.entity.ClientConfig;
 import com.dianping.cat.configuration.client.entity.Domain;
 import com.dianping.cat.configuration.client.entity.Property;
 import com.dianping.cat.configuration.client.transform.DefaultMerger;
+
+import java.util.Stack;
 
 public class ClientConfigMerger extends DefaultMerger {
 	public ClientConfigMerger(ClientConfig config) {
