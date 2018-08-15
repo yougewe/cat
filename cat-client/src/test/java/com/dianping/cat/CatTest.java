@@ -1,5 +1,6 @@
 package com.dianping.cat;
 
+import com.dianping.cat.message.Transaction;
 import junit.framework.Assert;
 
 import org.junit.Test;
@@ -11,7 +12,7 @@ public class CatTest {
 
 	@Test
 	public void test() {
-		Cat.newTransaction("logTransaction", "logTransaction");
+		Transaction trans = Cat.newTransaction("logTransaction", "logTransaction");
 		Cat.newEvent("logEvent", "logEvent");
 		Cat.newTrace("logTrace", "logTrace");
 		Cat.newHeartbeat("logHeartbeat", "logHeartbeat");
@@ -29,6 +30,9 @@ public class CatTest {
 		Cat.logEvent("RemoteLink", "Call", Message.SUCCESS, "Cat-0a010680-384736-2061");
 		Cat.logEvent("EventType", "EventName");
 		Cat.logHeartbeat("logHeartbeat", "logHeartbeat", Message.SUCCESS, null);
+		trans.setStatus(Transaction.SUCCESS);
+//		trans.setStatus(cause);
+		trans.complete();
 
 		Assert.assertEquals(true, Cat.isInitialized());
 	}
