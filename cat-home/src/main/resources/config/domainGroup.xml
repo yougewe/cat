@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <domain-group>
-   <domain id="PayOrder">
+   <domain id="cat">
       <group id="main">
-         <ip>10.10.10.1</ip>
-         <ip>10.10.10.2</ip>
+         <ip>192.168.11.6</ip>
       </group>
       <group id="event">
-         <ip>10.10.10.3</ip>
-         <ip>10.10.10.4</ip>
+         <ip>192.168.11.6</ip>
       </group>
    </domain>
 </domain-group>

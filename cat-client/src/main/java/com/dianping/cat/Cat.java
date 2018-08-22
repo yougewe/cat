@@ -62,7 +62,7 @@ public class Cat {
 	}
 
 	public static String getCatHome() {
-		String catHome = Properties.forString().fromEnv().fromSystem().getProperty("CAT_HOME", "D:\\www\\java\\cat\\cat-client");
+		String catHome = Properties.forString().fromEnv().fromSystem().getProperty("CAT_HOME", "/data/appdatas/cat");
 
 		return catHome;
 	}
